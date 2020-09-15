@@ -7,8 +7,13 @@ int main(){
 	scanf("%d",&b);
 	
 	if(a>=b){
-		float D=(float)a/b;
-		printf("Thuong 2 so:%f",D);
+		if(b!=0){
+			float D=(float)a/b;
+			printf("Thuong 2 so:%f",D);
+		}
+		else{
+			printf("Infinity");
+		}
 	}
 	else{
 		int M=a*b;
