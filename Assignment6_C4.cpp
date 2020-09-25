@@ -11,22 +11,21 @@ int main(){
 		printf("arr[%d] = ",i);
 		scanf("%d",&arr[i]);
 	}
-	int max=0,S=0,count=0,X=0;
+	int max=0,S;
 	for(int i=0;i<n;i++)
 		if(arr[i]>0){
-			S+=arr[i];
-			bool flag=false;
+			int count=0;
+			S=arr[i];
 			for(;i<n-1;i++)
 				if(arr[i+1]>0){
 					S+=arr[i+1];
-					flag=true;
+					count++;
 				}
 				else
 					break;			
-			if(flag==true)
+			if(count!=0)
 				if(max<S)
-					max=S;				
-			S=0;		
+					max=S;						
 		}
 	if(max==0)
 		printf("Khong co chuoi so duong nao");
